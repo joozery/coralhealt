@@ -7,6 +7,7 @@ import Profile from "./pages/Profile";
 import Premium from "./pages/Premium";
 import Scenes from "./pages/Scenes";
 import GiftCalm from "./pages/GiftCalm";
+import ToolsPage from "./pages/ToolsPage";
 
 const Maincontent = () => {
   const location = useLocation(); // ดึง path ปัจจุบัน
@@ -15,17 +16,19 @@ const Maincontent = () => {
   // กำหนดเนื้อหาตาม path ที่เลือก
   const renderContent = () => {
     switch (currentPath) {
-      case "/sleep":
+      case "/dashboard/tools": // ✅ เพิ่มเงื่อนไขให้รองรับ ToolsPage
+        return <ToolsPage />;
+      case "/dashboard/sleep":
         return <Sleep />;
-      case "/discover":
+      case "/dashboard/discover":
         return <Discover />;
-      case "/profile":
+      case "/dashboard/profile":
         return <Profile />;
-      case "/premium":
+      case "/dashboard/premium":
         return <Premium />;
-      case "/scenes":
+      case "/dashboard/scenes":
         return <Scenes />;
-      case "/giftcalm":
+      case "/dashboard/giftcalm":
         return <GiftCalm />;
       default:
         return <Home />; // หน้า Home เป็นค่าเริ่มต้น

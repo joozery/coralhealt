@@ -8,6 +8,7 @@ import Profile from "./Potalmember/pages/Profile";
 import Premium from "./Potalmember/pages/Premium";
 import Scenes from "./Potalmember/pages/Scenes";
 import GiftCalm from "./Potalmember/pages/GiftCalm";
+import ToolsPage from "./Potalmember/pages/ToolsPage"; // ✅ เพิ่ม import ToolsPage
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="premium" element={<Premium />} />
           <Route path="scenes" element={<Scenes />} />
           <Route path="giftcalm" element={<GiftCalm />} />
+          <Route path="tools" element={<ToolsPage />} /> {/* ✅ เพิ่ม Route ของ ToolsPage */}
         </Route>
 
         {/* ✅ เส้นทางของเว็บไซต์หลัก */}
